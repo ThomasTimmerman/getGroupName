@@ -49,17 +49,13 @@ public class UserController {
                 .map(record -> ResponseEntity.ok().body(record))
                 .orElse(ResponseEntity.notFound().build());
     }
+    
+    
     @PostMapping
     public User create(@RequestBody User user){     
         return repo.save(user);
     }
     
-    
-//    @PostMapping
-//    public User create(@RequestParam("name") String name, @RequestParam("email") String email){
-//        User user = new User(name,email);
-//        return repo.save(user);
-//    }
     
     @PutMapping(value="/{id}")
     public ResponseEntity<User> update(@PathVariable("id") long id,
@@ -74,6 +70,8 @@ public class UserController {
                 }).orElse(ResponseEntity.notFound().build());
         
     }
+    
+    
     @CrossOrigin(origins = "http://localhost:3000")
     @DeleteMapping(path ={"/{id}"})
     public ResponseEntity<?> delete(@PathVariable("id") long id) {
