@@ -30,7 +30,7 @@ public class CommentController {
     
     
     //CRUD
-    @GetMapping
+    @GetMapping(path = {"/all"})
     public List findAll(){
         return repo.findAll();
     }
@@ -51,7 +51,7 @@ public class CommentController {
     public ResponseEntity<Comment> update(@PathVariable("id") long id, @RequestBody Comment comment){
        return repo.findById(id)
                 .map(record -> {
-                    record.setComment(comment.getComment());
+                    record.setBody(comment.getBody());
                     
                     Comment updated = repo.save(record);
                     return ResponseEntity.ok().body(updated);

@@ -20,10 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//local
 @CrossOrigin(origins = "http://localhost:3000")
-//network 
-//@CrossOrigin(origins = "http://172.20.10.5:3000")
 @RequestMapping("api/user")
 @RestController
 public class UserController {

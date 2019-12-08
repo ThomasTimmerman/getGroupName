@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.novi.DiabloDemoDrop.model.FileModel;
 import com.novi.DiabloDemoDrop.repository.FileRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
  
-//@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class DownloadFileController {
 	
@@ -33,6 +34,20 @@ public class DownloadFileController {
     /*
      * Download Files
      */
+        @GetMapping("/api/file/name/{name}")
+	public ResponseEntity<byte[]> getFile(@PathVariable String name) {
+		Optional<FileModel> fileOptional = fileRepository.findByName(name);
+		
+		if(fileOptional.isPresent()) {
+			FileModel file = fileOptional.get();
+			return ResponseEntity.ok()
+					.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getName() + "\"")
+					.body(file.getAudiofile());	
+		}
+		
+		return ResponseEntity.status(404).body(null);
+	}
+        
 	@GetMapping("/api/file/{id}")
 	public ResponseEntity<byte[]> getFile(@PathVariable Long id) {
 		Optional<FileModel> fileOptional = fileRepository.findById(id);
