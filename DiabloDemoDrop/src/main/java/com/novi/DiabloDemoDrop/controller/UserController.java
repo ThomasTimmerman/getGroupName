@@ -7,8 +7,10 @@ import com.novi.DiabloDemoDrop.model.User;
 import com.novi.DiabloDemoDrop.repository.UserRepository;
 import com.novi.DiabloDemoDrop.service.UserService;
 import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -27,11 +30,14 @@ public class UserController {
 
     private final UserRepository repo;
     private final UserService service;
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
+    
 
     @Autowired
-    public UserController(UserRepository repo, UserService service) {
+    public UserController(UserRepository repo, UserService service, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.repo = repo;
         this.service = service;
+        this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
     // CRUD methods here
@@ -49,7 +55,8 @@ public class UserController {
     
     
     @PostMapping
-    public User create(@RequestBody User user){     
+    public User create(@RequestBody User user, @RequestParam Map<String, String> requestParams){
+        user.setPassword(new BCryptPasswordEncoder().encode(user.getPassword()));
         return repo.save(user);
     }
     
