@@ -4,7 +4,6 @@
 package com.novi.DiabloDemoDrop.model;
 
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,10 +19,8 @@ public class User {
     private Long id;
     
     @NotNull
-    @Column(unique=true)
     private String name;
     @NotNull
-    @Column(unique=true)
     private String email;
     @NotNull
     private String password;
@@ -33,10 +30,9 @@ public class User {
     public User() {
     }
     
-    public User(String name, String email, String password) {
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
-        this.password = password;
     }
 
     public Long getId() {
