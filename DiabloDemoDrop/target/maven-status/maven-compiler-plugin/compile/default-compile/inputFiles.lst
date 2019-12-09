@@ -1,0 +1,16 @@
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/repository/UserRepository.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/repository/FileRepository.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/repository/CommentRepository.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/DiabloDemoApplication.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/utility/JavaMailUtil.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/model/View.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/controller/CommentController.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/model/User.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/controller/DownloadFileController.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/controller/UserController.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/configuration/MvcConfig.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/controller/UploadFileController.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/model/FileModel.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/service/UserService.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/configuration/SecurityConfiguration.java
+/Users/ThomasTimmerman/getGroupName/DiabloDemoDrop/src/main/java/com/novi/DiabloDemoDrop/model/Comment.java
