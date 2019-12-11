@@ -14,7 +14,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
+<<<<<<< .merge_file_lAKsKy
     // Permit options are for development purpose. These permit options must be specified with the userroles in production.
+=======
+    //Permit options are for development purpose. These permit options must be specified with the userroles in production.
+>>>>>>> .merge_file_Eooams
     // ** means plus everything that coms after it.
     @Override
     public void configure(HttpSecurity http) throws Exception {

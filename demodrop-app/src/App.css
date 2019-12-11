@@ -1,7 +1,10 @@
+<<<<<<< .merge_file_6BRr91
 h3 {
   color: #fff;
 }
 
+=======
+>>>>>>> .merge_file_sng5tm
 .footer {
   position: absolute;
   bottom: 0;
@@ -55,7 +58,11 @@ section {
 
 .box-background {
   padding: 30px;
+<<<<<<< .merge_file_6BRr91
   background-color: rgba(0, 0, 0, 0);
+=======
+  background-color: rgba(0, 0, 0, 0.0);
+>>>>>>> .merge_file_sng5tm
 }
 
 a.nav-link {
@@ -88,4 +95,8 @@ a.nav-link {
   to {
     transform: rotate(360deg);
   }
+<<<<<<< .merge_file_6BRr91
 }
+=======
+}
+>>>>>>> .merge_file_sng5tm

@@ -23,11 +23,16 @@ class HeaderComponent extends Component {
             )}
             {isUserLoggedIn && (
               <li>
+<<<<<<< .merge_file_MU4LBM
                 <Link className="nav-link" to="/fileupload">
+=======
+                <Link className="nav-link" to="/demodrop">
+>>>>>>> .merge_file_y1i07z
                   Demodrop
                 </Link>
               </li>
             )}
+<<<<<<< .merge_file_MU4LBM
             {isUserLoggedIn && (
               <li>
                 <Link className="nav-link" to="/filelist">
@@ -35,6 +40,8 @@ class HeaderComponent extends Component {
                 </Link>
               </li>
             )}
+=======
+>>>>>>> .merge_file_y1i07z
           </ul>
           <ul className="navbar-nav navbar-collapse justify-content-end">
             {!isUserLoggedIn && (
