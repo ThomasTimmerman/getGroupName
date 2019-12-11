@@ -7,11 +7,20 @@ import HeaderComponent from "./HeaderComponent.jsx";
 import LogoutComponent from "./LogoutComponent.jsx";
 import WelcomeComponent from "./WelcomeComponent.jsx";
 import SignupComponent from "./SignupComponent.jsx";
+<<<<<<< .merge_file_QLpbRw
+import FileUpload from "./FileUpload.jsx";
+
+class DemoDrop extends Component {
+  render() {
+    return (
+      <div className="DemoDrop">
+=======
 
 class TodoApp extends Component {
   render() {
     return (
       <div className="TodoApp">
+>>>>>>> .merge_file_KIrGhr
         <Router>
           <>
             <HeaderComponent />
@@ -21,6 +30,10 @@ class TodoApp extends Component {
                 <Route path="/" exact component={LoginComponent} />
                 <Route path="/login" component={LoginComponent} />
                 <Route path="/signup" component={SignupComponent} />
+<<<<<<< .merge_file_QLpbRw
+                <Route path="/fileupload" component={FileUpload} />
+=======
+>>>>>>> .merge_file_KIrGhr
                 <AuthenticatedRoute
                   path="/welcome/:name"
                   component={WelcomeComponent}
@@ -40,4 +53,8 @@ class TodoApp extends Component {
   }
 }
 
+<<<<<<< .merge_file_QLpbRw
+export default DemoDrop;
+=======
 export default TodoApp;
+>>>>>>> .merge_file_KIrGhr

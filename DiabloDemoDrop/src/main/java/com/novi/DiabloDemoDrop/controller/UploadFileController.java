@@ -25,6 +25,10 @@ public class UploadFileController {
         try {
             // save file to MySQL
             FileModel filemode = new FileModel(file.getOriginalFilename(), file.getContentType(), file.getBytes(), description);
+<<<<<<< .merge_file_4cjkOT
+            
+=======
+>>>>>>> .merge_file_VP1Aqv
             fileRepository.save(filemode);
             return "File uploaded successfully! -> \nFilename = " + file.getOriginalFilename()+"\nDescription: "+description;
         } catch (Exception e) {
